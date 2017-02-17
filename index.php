@@ -1,7 +1,9 @@
 <?php
 include 'dbConnection.php';
 
-  $sql = 'SELECT * FROM  Author join Book on Book.author_id = Author.id';
+  $sql = "SELECT
+        Book.id as Book_id, Title, ReleaseDate, Genre, Publisher, First, Last, BirthYear, DeathYear
+        FROM Book JOIN Author ON Author.id = Book.Author_id";
   $result = $conn->query($sql);
 ?>
 
@@ -30,14 +32,28 @@ include 'dbConnection.php';
     <body>
       <?php include 'nav.php'?>
         <div class="container">
-          <div class="indexdata">
+          <table class= "table">
+             <thead>
+              <tr>
+                <th>First</th>
+                 <th>Last</th>
+               </tr>
+             </thead>
+             
+            <tbody>
              <?php
                 while ($row = $result->fetch_assoc()){
                   echo $row['First']. " | " . $row['Last'] . " | " . $row['BirthYear'] . " | ". $row['DeathYear'] . " | ".
-                  $row['Title'] . " | ". $row['ReleaseDate'] . " | " . $row['Genre'] . " | " . $row['Publisher'] . '<br>';
+                  $row['Title'] . " | ". $row['ReleaseDate'] . " | " . $row['Genre'] . " | " . $row['Publisher'] . " | <a href=deleteBook.php?Book_id=" . $row['Book_id']  ."> delete</a>" . 
+                  " | <a href=BookForm.php?Book_id=" . $row['Book_id']  . "> update book</a>". "<br>";
                 }
               ?>
-          </div>
+            
+             
+            
+               
+             </tbody>
+          </table>
         </div>
     </body>
 </html> 

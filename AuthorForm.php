@@ -30,16 +30,16 @@
               <h1 class="form-signin-heading">Enter Author</h1>
       
               <label for="First"></label>
-              <input type="text" name="last" class="form-control" placeholder="First"/>
+              <input type="text" name="First" class="form-control" placeholder="First"/>
               
               <label for="Last"></label>
-              <input type="text" name="last" class="form-control" placeholder="Last"/>
+              <input type="text" name="Last" class="form-control" placeholder="Last"/>
       
-              <label for="Birth Year"></label>
-              <input type="text" name="birth year" class="form-control" placeholder="Birth Year"/>
+              <label for="BirthYear"></label>
+              <input type="text" name="BirthYear" class="form-control" placeholder="Birth Year"/>
               
-               <label for="Death Year"></label>
-              <input type="text" name="death year" class="form-control" placeholder="Death Year"/>
+               <label for="DeathYear"></label>
+              <input type="text" name="DeathYear" class="form-control" placeholder="Death Year"/>
       
               <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
              </form>

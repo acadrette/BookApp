@@ -3,10 +3,10 @@
     
     $First = $_POST['First'];
     $Last = $_POST['Last'];
-    $Birth = $_POST['BirthYear'];
-    $Death = $_POST['DeathYear'];
+    $BirthYear = $_POST['BirthYear'];
+    $DeathYear = $_POST['DeathYear'];
     $sql = "INSERT INTO Author (First, Last, BirthYear, DeathYear)
-    VALUES ('$First', '$Last', '$Birth', '$Death')";
+    VALUES ('$First', '$Last', '$BirthYear', '$DeathYear')";
 ?>
 
 <!DOCTYPE html>
@@ -48,10 +48,10 @@
       ?>
 
 
-      Title: <?php echo $First ?><br>
-      Release Date: <?php echo $Last ?><br>
-      Genre: <?php echo $Birth ?><br>
-      Publisher: <?php echo $Death ?><br>
+      First: <?php echo $First ?><br>
+      Late: <?php echo $Last ?><br>
+      Birth Year: <?php echo $BirthYear ?><br>
+      Death Year: <?php echo $DeathYear ?><br>
 
     </div>
   </body>

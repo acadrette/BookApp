@@ -8,8 +8,17 @@ $Title = $_POST['Title'];
 $Release = $_POST['ReleaseDate'];
 $Genre = $_POST['Genre'];
 $Publisher = $_POST['Publisher'];
-$sql = "INSERT INTO Book (Title, ReleaseDate, Genre, Publisher, Author_id)
-VALUES ('$Title', '$Release', '$Genre', '$Publisher','$Author_id')";
+
+if (isset($_POST['Book_id'])) {
+    $Book_id = $_POST['Book_id'];
+    $sql =  "UPDATE Book SET Title='$Title', ReleaseDate='$Release', Genre='$Genre', Publisher='$Publisher'
+             WHERE id = $Book_id";
+}             
+else {
+    $sql = "INSERT INTO Book (Title, ReleaseDate, Genre, Publisher)
+            VALUES ('$Title', $Release', '$Genre', '$Publisher')";
+
+}  
 
 ?>
 
@@ -56,7 +65,6 @@ VALUES ('$Title', '$Release', '$Genre', '$Publisher','$Author_id')";
       Release Date: <?php echo $Release ?><br>
       Genre: <?php echo $Genre ?><br>
       Publisher: <?php echo $Publisher ?><br>
-      
       
 
     </div>
