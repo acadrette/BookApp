@@ -49,7 +49,7 @@
 
 
       First: <?php echo $First ?><br>
-      Late: <?php echo $Last ?><br>
+      Last: <?php echo $Last ?><br>
       Birth Year: <?php echo $BirthYear ?><br>
       Death Year: <?php echo $DeathYear ?><br>
 

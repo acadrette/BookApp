@@ -5,18 +5,18 @@ include 'dbConnection.php';
 $Author_id = $_POST['Author_id'];
 
 $Title = $_POST['Title'];
-$Release = $_POST['ReleaseDate'];
+$ReleaseDate = $_POST['ReleaseDate'];
 $Genre = $_POST['Genre'];
 $Publisher = $_POST['Publisher'];
 
 if (isset($_POST['Book_id'])) {
     $Book_id = $_POST['Book_id'];
-    $sql =  "UPDATE Book SET Title='$Title', ReleaseDate='$Release', Genre='$Genre', Publisher='$Publisher'
+    $sql =  "UPDATE Book SET Title='$Title', ReleaseDate='$ReleaseDate', Genre='$Genre', Publisher='$Publisher'
              WHERE id = $Book_id";
 }             
 else {
     $sql = "INSERT INTO Book (Title, ReleaseDate, Genre, Publisher)
-            VALUES ('$Title', $Release', '$Genre', '$Publisher')";
+            VALUES ('$Title', '$ReleaseDate', '$Genre', '$Publisher')";
 
 }  
 
@@ -62,7 +62,7 @@ else {
 
 
       Title: <?php echo $Title ?><br>
-      Release Date: <?php echo $Release ?><br>
+      Release Date: <?php echo $ReleaseDate?><br>
       Genre: <?php echo $Genre ?><br>
       Publisher: <?php echo $Publisher ?><br>
       
