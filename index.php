@@ -9,6 +9,8 @@ include 'dbConnection.php';
 
 <?php include 'head.php' ?>
 
+<h1 class="form-signin-heading">Book Database</h1>
+
           <table class= "table">
             
              <thead>

@@ -1,10 +1,10 @@
 <?php
     include 'dbConnection.php';
     
-    $First = $_POST['First'];
-    $Last = $_POST['Last'];
-    $BirthYear = $_POST['BirthYear'];
-    $DeathYear = $_POST['DeathYear'];
+    $First = real_escape_string($_POST ['First']);
+    $Last = real_escape_string($_POST['Last']);
+    $BirthYear = real_escape_string($_POST['BirthYear']);
+    $DeathYear = real_escape_string($_POST['DeathYear']);
     
     if (isset($_POST ['Author_id'])) {
       $Author_id = $_POST ['Author_id'];

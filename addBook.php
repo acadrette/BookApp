@@ -4,10 +4,10 @@ include 'dbConnection.php';
     
 $Author_id = $_POST['Author_id'];
 
-$Title = $_POST['Title'];
-$ReleaseDate = $_POST['ReleaseDate'];
-$Genre = $_POST['Genre'];
-$Publisher = $_POST['Publisher'];
+$Title = $conn->real_escape_string($_POST ['Title']);
+$ReleaseDate = $conn->real_escape_string($_POST['ReleaseDate']);
+$Genre = $conn->real_escape_string ($_POST['Genre']);
+$Publisher =$conn->real_escape_string ($_POST['Publisher']);
 
 if (isset($_POST['Book_id'])) {
     $Book_id = $_POST['Book_id'];

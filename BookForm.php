@@ -22,19 +22,22 @@ include 'head.php';
     
   <div class = "form">
        <h1 class="form-signin-heading">Enter Book</h1>
-           <label for="Author_id">Author:</label>
-              <select name="Author_id">
-                <?php
-                if ($Authors->num_rows > 0) {
-                    // output data of each row
-                    while($Author = $Authors->fetch_assoc()) {
-                        echo "<option value='" . $Author["id"] ."'";
-                        if (isset($Book['Author_id']) and  $Book['Author_id'] == $Author["id"]) echo "selected";
-                        echo ">" . $Author["Last"] . "</option>";
+           
+               <label for="Author_id"></label>
+        
+                  <select name="Author_id">
+                      <option value="" disabled selected>Select Author</option>
+                    <?php
+                    if ($Authors->num_rows > 0) {
+                        // output data of each row
+                        while($Author = $Authors->fetch_assoc()) {
+                            echo "<option value='" . $Author["id"] ."'";
+                            if (isset($Book['Author_id']) and  $Book['Author_id'] == $Author["id"]) echo "selected";
+                            echo ">" . $Author["Last"] . "</option>";
+                        }
                     }
-                }
-              
-                ?>
+                    ?>
+      
               </select>
                 <div>
                   <label for="Title"></label>
