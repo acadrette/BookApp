@@ -14,23 +14,23 @@ include 'dbConnection.php';
               <tr>
                 <th>First</th>
                  <th>Last</th>
+                 <th></th>
+                 <th></th>
                </tr>
              </thead>
              
             <tbody>
-              <tr>
-                
-             <td>
+             
              <?php
              
                 while ($row = $result->fetch_assoc()){
-                  echo $row['First']. "  " . $row['Last'] . "<br>";
+                  echo "<tr><td>" .  $row['First']. "</td><td>" . $row['Last'] . 
+                "</td><td> <a href=deleteAuthor.php?Author_id=" . $row['id']  ."> delete author</a>" . 
+                      "</td><td> <a href=AuthorForm.php?Author_id=" . $row['id']  . "> update author</a>". 
+                  "</td></tr>";
                 }
               ?>
-              </td>
-            
-            
-               </tr>
+         
              </tbody>
           </table>
         </div>

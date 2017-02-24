@@ -21,25 +21,22 @@ include 'dbConnection.php';
                  <th>Release Date</th>
                  <th>Genre</th>
                  <th>Publisher</th>
+                 <th></th>
+                 <th></th>
                </tr>
              </thead>
              
             <tbody>
-              <tr>
-                
-             <td>
              <?php
              
                 while ($row = $result->fetch_assoc()){
-                  echo $row['First']. " | " . $row['Last'] . " | " . $row['BirthYear'] . " | ". $row['DeathYear'] . " | ".
-                  $row['Title'] . " | ". $row['ReleaseDate'] . " | " . $row['Genre'] . " | " . $row['Publisher'] . " | <a href=deleteBook.php?Book_id=" . $row['Book_id']  ."> delete</a>" . 
-                  " | <a href=BookForm.php?Book_id=" . $row['Book_id']  . "> update book</a>". "<br>";
+                  echo "<tr><td>" .  $row['First']. "</td><td> " . $row['Last'] . "</td><td> " . $row['BirthYear'] . "</td><td> ". $row['DeathYear'] . "</td><td> ".
+                  $row['Title'] . "</td><td> ". $row['ReleaseDate'] . " </td><td> " . $row['Genre'] . " </td><td> " . $row['Publisher'] .
+                  " </td><td> <a href=deleteBook.php?Book_id=" . $row['Book_id']  ."> delete book</a>" . 
+                  " </td><td> <a href=BookForm.php?Book_id=" . $row['Book_id']  . "> update book</a>". "</td></tr>";
                 }
               ?>
-              </td>
             
-            
-               </tr>
              </tbody>
           </table>
         </div>
