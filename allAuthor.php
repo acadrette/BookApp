@@ -7,8 +7,9 @@ include 'dbConnection.php';
 ?>
 
 <?php include 'head.php' ?>
-
-          <table class= "table">
+<h1 class="form-signin-heading">Authors</h1>
+        <a href="AuthorForm.php" class="btn btn-default">Add Author</a>
+          <table class= "table table-hover">
             
              <thead>
               <tr>

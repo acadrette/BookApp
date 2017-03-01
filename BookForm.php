@@ -16,12 +16,14 @@ if (isset($_GET['Book_id'])) {
 include 'head.php';
 ?>
  
-
-<form action="addBook.php" method="post" class="form-signin">
+  <div class = "form">
+    <form action="addBook.php" method="post" class="form-signin">
+        <h1 class="form-signin-heading">Enter Book</h1>
+        
     <?php if(isset($Book_id)) echo "<input type='hidden' name='Book_id' value=" . $Book_id ." >"; ?>
     
-  <div class = "form">
-       <h1 class="form-signin-heading">Enter Book</h1>
+
+      
            
                <label for="Author_id"></label>
         
@@ -62,5 +64,6 @@ include 'head.php';
 
             </form>    
         </div>    
+        <?php include 'footer.php'?>
     </body>
 </html>

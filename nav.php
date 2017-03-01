@@ -11,9 +11,8 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="AuthorForm.php">Add Author</a></li>
-        <li><a href="BookForm.php">Add Books</a></li>
-        <li><a href="allAuthor.php">All Authors</a></li>
+        <li><a href="BookForm.php">Add Book</a></li>
+        <li><a href="allAuthor.php">Authors</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   
