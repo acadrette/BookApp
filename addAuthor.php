@@ -1,15 +1,15 @@
 <?php
     include 'dbConnection.php';
     
-    $First = $_POST['First'];
-    $Last = $_POST['Last'];
-    $BirthYear = $_POST['BirthYear'];
-    $DeathYear = $_POST['DeathYear'];
+    $First = $conn->real_escape_string($_POST['First']);
+    $Last = $conn->real_escape_string($_POST['Last']);
+    $BirthYear =$conn->real_escape_string( $_POST['BirthYear']);
+    $DeathYear = $conn->real_escape_string($_POST['DeathYear']);
     
     if (isset($_POST ['Author_id'])) {
       $Author_id = $_POST ['Author_id'];
       $sql = "UPDATE Author SET First='$First', Last ='$Last', BirthYear='$BirthYear', DeathYear='$DeathYear' 
-              WHERE id ='Author_id'";
+              WHERE id =$Author_id";
     }
     else {
     $sql = "INSERT INTO Author (First, Last, BirthYear, DeathYear)

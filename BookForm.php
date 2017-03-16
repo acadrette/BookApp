@@ -43,19 +43,19 @@ include 'head.php';
               </select>
                 <div>
                   <label for="Title"></label>
-                  <input type="text" name="Title" class="form-control" placeholder="Title" <?php if (isset($Book['Title'])) echo "value='" . $Book['Title'] . "'"; ?> />
+                  <input type="text" required name="Title" class="form-control" placeholder="Title" <?php if (isset($Book['Title'])) echo "value='" . $Book['Title'] . "'"; ?> />
               </div>
               <div>   
                   <label for="ReleaseDate"></label>
-                  <input type="text" name="ReleaseDate" class="form-control" placeholder="Release Date" <?php if (isset($Book['ReleaseDate'])) echo "value='" . $Book['ReleaseDate'] . "'"; ?>  />
+                  <input type="text" required name="ReleaseDate" class="form-control" placeholder="Release Date" <?php if (isset($Book['ReleaseDate'])) echo "value='" . $Book['ReleaseDate'] . "'"; ?>  />
               </div>
               <div>
                   <label for="Genre"></label>
-                  <input type="text" name="Genre" class="form-control" placeholder="Genre" <?php if (isset($Book['Genre'])) echo "value='" . $Book['Genre'] . "'"; ?>  />
+                  <input type="text" required name="Genre" class="form-control" placeholder="Genre" <?php if (isset($Book['Genre'])) echo "value='" . $Book['Genre'] . "'"; ?>  />
               </div>
               <div>
                    <label for="Publisher"></label>
-                  <input type="text" name="Publisher" class="form-control" placeholder="Publisher"<?php if (isset($Book['Publisher'])) echo "value='" . $Book['Publisher'] . "'"; ?>  />
+                  <input type="text" required name="Publisher" class="form-control" placeholder="Publisher"<?php if (isset($Book['Publisher'])) echo "value='" . $Book['Publisher'] . "'"; ?>  />
               </div>
           
                   <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
